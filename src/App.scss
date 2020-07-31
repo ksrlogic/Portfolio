@@ -149,6 +149,82 @@ nav {
     margin-bottom: 20px;
   }
 }
+
+// Contact Me
+
+.contact_me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  min-height: 800px;
+  h1 {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    p {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 20px;
+    }
+  }
+  .imageContainer {
+    position: relative;
+    width: 500px;
+    height: 669.23px;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    img {
+      width: 500px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  .imageContainer::before {
+    content: "123";
+    width: 60px;
+    position: absolute;
+    height: 100%;
+    transform-origin: left;
+    background-position: center;
+    background: url(./images/side.jpg);
+    transform: rotateY(90deg);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  }
+  .imageContainer:hover {
+    transform: rotateY(35deg);
+  }
+  .imageContainer:active {
+    transform: rotateY(180deg);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  }
+  .imageContainer::after {
+    content: "Tel: 010-2968-2118 \A Email: ksrlogic@naver.com \A KaKaoTalk: ribbone";
+    white-space: pre-wrap;
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    filter: brightness(90%);
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    transform-origin: center;
+    background-position: center;
+    background: url(./images/girl_in_bluejeans.jpg);
+    transform: rotateY(180deg) translateZ(60px);
+    box-shadow: 20px 20px 20px rgba(46, 19, 19, 0.2);
+  }
+}
+@media screen and (max-width: 600px) {
+}
 @media (min-width: 1281px) {
   .my_info {
     ul {
@@ -174,7 +250,7 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 100px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   flex-wrap: wrap;
   h1 {
     margin-bottom: 30px;
@@ -227,7 +303,66 @@ nav {
     }
   }
 }
+@media (min-width: 1281px) {
+  .CardContainer {
+    min-height: 460px;
+  }
+}
+.footer_info {
+  font-family: "Sunflower", sans-serif;
+  font-size: 20px;
+}
+footer {
+  background-color: #474747;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Indie Flower", cursive;
+  flex-wrap: wrap;
+  div {
+    margin: 100px;
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+  }
+  address {
+    margin: 100px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    a {
+      color: white;
+    }
+    a:hover {
+      color: white;
+    }
+  }
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+}
 
+// Skills
+
+.skill_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  background-color: #fff;
+  border-radius: 100px;
+  div {
+    margin: 50px;
+  }
+  img {
+    width: 100px;
+  }
+}
 /* Mobile */
 @media screen and (max-width: 600px) {
   .header_box > h1 {
@@ -296,5 +431,24 @@ nav {
     img {
       left: 30px;
     }
+  }
+  .contact_me {
+    min-height: 1500px;
+  }
+  .contact_me .imageContainer {
+    height: 535px;
+    width: 400px;
+    img {
+      width: 400px;
+      height: 535px;
+    }
+  }
+
+  .contact_me .imageContainer::after {
+    width: 400px;
+    height: 535px;
+  }
+  .contact_me .imageContainer::before {
+    height: 535px;
   }
 }

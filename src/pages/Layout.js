@@ -4,7 +4,9 @@ import { MainInfo, Info } from "../Components/Info";
 import Slider from "../Components/Slider";
 import Card from "../Components/Card";
 import WhatIsJs from "../Components/whatIsJs";
+import WhatCanIUse from "../Components/whatCanIUse";
 import _3DComponent from "../Components/_3D";
+import Footer from "../Components/Footer";
 // Imgaes
 import image1 from "../images/slider_1.jpg";
 import image2 from "../images/slider_2.jpg";
@@ -44,7 +46,9 @@ const LayOut = () => {
         <Card title="카드들도" imgsrc={image2} />
         <Card title="만들 수 있어요!" imgsrc={image3} />
       </div>
+      <WhatCanIUse />
       <_3DComponent />
+      <Footer />
     </>
   );
 };

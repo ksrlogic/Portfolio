@@ -8,6 +8,8 @@ const Info = () => {
       <p>
         Full Stack Developer
         <br /> Using NodeJS, ReactJS.
+        <br />
+        <br /> Sungkyunkwan Univ. 20
       </p>
     </div>
   );
